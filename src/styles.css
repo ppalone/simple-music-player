@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans HK";
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 230, 234);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 400px;
+  background-color: rgb(20, 20, 20);
+  padding: 4px 12px;
+  box-shadow: 1px 1px 4px 1px rgba(255, 137, 255, 0.25);
+  user-select: none;
+}
+
+.song-img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-img img {
+  width: 160px;
+  height: 160px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 8px 0;
+}
+
+.song-info p:nth-of-type(1) {
+  font-weight: 600;
+}
+
+.song-info p:nth-of-type(2) {
+  font-size: 14px;
+}
+
+.song-seekbar input {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 24px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls i {
+  color: white;
+  cursor: pointer;
+}
+
+.controls i:nth-of-type(1) {
+  font-size: 24px;
+}
+
+.controls i:nth-of-type(2) {
+  font-size: 32px;
+  margin: 0 12px;
+}
+
+.controls i:nth-of-type(3) {
+  font-size: 24px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: rgb(255, 209, 249, 0.95);
+  border: none;
+  height: 4px;
+  outline: none;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: pink;
+  border: 1px solid pink;
+  /* box-shadow: 0px 0px 2px 1px rgba(253, 193, 245, 0.75); */
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: rgb(255, 147, 241);
+}
